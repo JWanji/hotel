@@ -28,7 +28,7 @@
       text-align: center;
       display: flex;
       margin-top: 0;
-      margin-bottom: 1%;
+      margin-bottom: 5%;
       justify-content: space-around;
     }
 
@@ -45,20 +45,33 @@
     nav ul li a:hover {
       color: rgb(0, 210, 141);
     }
-    /* Contact Form */
-    table{
-        margin: 0 auto;
-        padding: 20px;
-        /* border: 2px solid black; */
-        border-radius: 20px;
-        box-shadow: 10px 10px 10px lightgray;
+
+    .container {
+      width: 70%;
+      display: grid;
+      justify-content: center;
+
+      grid-template-columns: 40% 60%;
+      box-shadow: 10px 10px 10px 5px lightgrey;
+      margin: 0 auto;
     }
-    .contact-form {
+
+    .details {
+      display: flex;
+      /* justify-content: center; */
+      align-items: center;
+      padding: 10px;
+
+    }
+
+    .address-container {
+      background-color: rgb(0, 210, 141);
       padding: 10%;
     }
-   
-    .contact-form h1{
-        text-align: center;
+
+    /* Contact Form */
+    .contact-form {
+      padding: 10%;
     }
 
     .contact-form form td {
@@ -89,33 +102,6 @@
       font-size: large;
       cursor: pointer;
     }
-    .feedback-container{
-      display: flex;
-      flex-direction: column;
-      /* align-items: center; */
-      margin: 0 auto;
-      width: 40%;
-      }
-    .feedback{
-      margin-right: 20px;
-      width: max-content;
-    }
-    .feedback p{
-      font-size: 20px;
-      color: whitesmoke;
-      font-weight: bold;
-      letter-spacing: 5px;
-    }
-    .feedback-box{
-      display: flex;
-      justify-content: space-between;
-      background-color: rgb(0, 210, 141);
-      margin-top: 20px;
-      border-radius: 20px;
-      padding: 10px 40px;
-      box-shadow: 5px 5px 5px lightgray;
-    }
-    
   </style>
 </head>
 
@@ -123,18 +109,33 @@
   <nav>
     <ul>
       <li><a href="../index.html">Home</a></li>
-      <li><a href="./contactUs.html">Contact Us</a></li>
+      <li><a href="#">Contact Us</a></li>
       <li><a href="./aboutUs.html">About Us</a></li>
-      <li><a href="#">Testimonials</a></li>
+      <li><a href="./feedback.html">Testimonials</a></li>
       <li><a href="./locations.html">Locations</a></li>
     </ul>
   </nav>
- <div class="feedback-container">
-  </div>
- 
+  <div class="container">
+    <div class="address-container">
+      <h1>Let's get in touch</h1>
+      <P>You can reach to us at below details. We are open for any suggestions or your visits!</P>
+      <div class="email details"><i class="material-icons">email</i>
+        <p>hotel@gmail.com</p>
+      </div>
+      <div class="phone details"><i class="material-icons">local_phone</i>
+        <p>888-367-4823</p>
+      </div>
+      <div class="location details"><i class="material-icons" style="font-size:36px">location_on</i>
+        <p>234 Washinton DC 21567</p>
+      </div>
+      <div class="Web-page details"><i class="material-icons">web_asset</i>
+        <p>www.hotel.com</p>
+      </div>
+
+    </div>
     <div class="contact-form">
       <form action="#">
-        <h1>Give Feedback</h1>
+        <h1>Get in Touch</h1>
         <table>
           <tr>
             <td><label for="fname" class="personal-info" >First Name</label></td>
@@ -153,15 +154,14 @@
             <td><textarea name="message" id="message" cols="30" rows="10"></textarea></td>
           </tr>
           <tr><td>
-            <button type="submit" id="submit-form">Submit Feedback</button>
+            <button type="submit" id="submit-form">Send Message</button>
           </td></tr>
         </table>
       </form>
     </div>
+  </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-  <script src="../js/feedback.js"></script>
+  <script src="../js/contact.js"></script>
 
 </body>
 

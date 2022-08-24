@@ -1,15 +1,14 @@
 package com.demo.hotel.model;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
 @Table
 public class Customer {
 
 	@Id // To specify this field as Primary key in DB
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer customerId;
-
 	private String firstName;
 	private String lastName;
 	private String subject;
@@ -66,13 +65,5 @@ public class Customer {
 
 	public void setType(String type) {
 		this.type = type;
-	}
-
-	public Integer getCustomerId() {
-		return customerId;
-	}
-
-	public void setCustomerId(Integer customerId) {
-		this.customerId = customerId;
 	}
 }

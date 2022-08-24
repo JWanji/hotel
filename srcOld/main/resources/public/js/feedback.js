@@ -1,27 +1,4 @@
 const submitForm = document.querySelector('#submit-form');
-const feedbackContainer = document.querySelector('.feedback-container');
-
-function renderFeedback() {
-    fetch('http://localhost:8080/hotel/feedback')
-        .then(response => response.text())
-        .then(data => {
-            console.log(data);
-            data = JSON.parse(data);
-            for (let i = 0; i < data.length; i++){
-                $('.feedback-container').append(`
-                <div class="feedback-box">
-                <div class="feedback">
-                    <p>${data[i]}</p>
-    
-                </div>
-                </div>
-                `)
-            }
-            
-        })
-}
-renderFeedback();
-
 
 function submitContactForm(e) {
 

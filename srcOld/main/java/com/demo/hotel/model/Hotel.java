@@ -22,13 +22,6 @@ public class Hotel {
 	public Hotel() {
 	}
 
-	public Hotel(Integer hotelId, String hotelName, Location location, String imageLink) {
-		this.hotelId = hotelId;
-		this.hotelName = hotelName;
-		this.location = location;
-		this.imageLink = imageLink;
-	}
-
 	public Integer getHotelId() {
 		return hotelId;
 	}

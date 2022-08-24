@@ -33,29 +33,11 @@ public class CustomerServiceImpl implements CustomerService {
 	}
 
 	public void addFeedback(Customer customer) {
-		Integer maxId = 0;
-		Iterator<Customer> it = customerRepository.findAll().iterator();
-		while (it.hasNext()) {
-			Customer cust = it.next();
-			if (customer.getCustomerId()!=null && customer.getCustomerId()> maxId) {
-				maxId = customer.getCustomerId() +1;
-			}
-			customer.setCustomerId(maxId);
-		}
 		customer.setType("Feedback");
 		customerRepository.save(customer);
 	}
 
 	public void contactUs(Customer customer) {
-		Integer maxId = 0;
-		Iterator<Customer> it = customerRepository.findAll().iterator();
-		while (it.hasNext()) {
-			Customer cust = it.next();
-			if (customer.getCustomerId()!=null && customer.getCustomerId()> maxId) {
-				maxId = customer.getCustomerId() +1;
-			}
-			customer.setCustomerId(maxId);
-		}
 		customer.setType("Contact");
 		customerRepository.save(customer);
 	}
