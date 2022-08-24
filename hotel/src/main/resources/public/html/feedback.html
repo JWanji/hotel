@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="../css/style.css" /> -->
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+    body {
+      font-family: 'Roboto', sans-serif;
+      font-size: 14px;
+      margin: 0;
+      box-sizing: border-box;
+
+    }
+
+    nav {
+      background-color: rgb(31, 31, 31);
+    }
+
+    nav ul {
+      list-style-type: none;
+      text-align: center;
+      display: flex;
+      margin-top: 0;
+      margin-bottom: 1%;
+      justify-content: space-around;
+    }
+
+    nav ul li {
+      margin: 20px auto;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: whitesmoke;
+      font-size: 20px;
+    }
+
+    nav ul li a:hover {
+      color: rgb(0, 210, 141);
+    }
+    /* Contact Form */
+    table{
+        margin: 0 auto;
+        padding: 20px;
+        /* border: 2px solid black; */
+        border-radius: 20px;
+        box-shadow: 10px 10px 10px lightgray;
+    }
+    .contact-form {
+      padding: 10%;
+    }
+   
+    .contact-form h1{
+        text-align: center;
+    }
+
+    .contact-form form td {
+      padding: 10px 0px;
+      font-size: large;
+      font-weight: bold;
+    }
+
+    .contact-form form td label {
+      padding-right: 30px;
+    }
+
+    .contact-form form td input {
+      outline: 0;
+      border-width: 0 0 2px;
+      border-color: grey;
+      border-style: solid;
+      width: 100%;
+      font-size: large;
+
+    }
+    #submit-form{
+      padding: 10px 20px;
+      background-color: rgb(0, 210, 141);
+      color: whitesmoke;
+      border-radius: 10px;
+      border-color: white;
+      font-size: large;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="./contactUs.html">Contact Us</a></li>
+      <li><a href="./aboutUs.html">About Us</a></li>
+      <li><a href="#">Testimonials</a></li>
+      <li><a href="./locations.html">Locations</a></li>
+    </ul>
+  </nav>
+ 
+    <div class="contact-form">
+      <form action="#">
+        <h1>Give Feedback</h1>
+        <table>
+          <tr>
+            <td><label for="fname" class="personal-info" >First Name</label></td>
+            <td><input type="text" name="fname" id="fname" placeholder="Enter your first name..."></td>
+          </tr>
+          <tr>
+            <td><label for="lname" class="personal-info" >Last Name</label></td>
+            <td><input type="text" id="lname" placeholder="Enter your last name..."></td>
+          </tr>
+          <tr>
+            <td><label for="subject" class="personal-info">Subject</label></td>
+            <td><input type="text" id="subject" placeholder="Subject..."></td>
+          </tr>
+          <tr>
+            <td><label for="message" class="personal-info">Message</label></td>
+            <td><textarea name="message" id="message" cols="30" rows="10"></textarea></td>
+          </tr>
+          <tr><td>
+            <button type="submit" id="submit-form">Submit Feedback</button>
+          </td></tr>
+        </table>
+      </form>
+    </div>
+
+
+  <script src="../js/feedback.js"></script>
+
+</body>
+
+</html>
